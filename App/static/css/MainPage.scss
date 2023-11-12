@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////////
+///
+///
+
+@import "DEFAULTCOLOR.css";
+
+///
+///
+////////////////////////////////////////////////////////////////////////
+
+body {
+  height: 100vh;
+  background-color: var(--primary-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    width: clamp(400px, 50%, 600px);
+    height: clamp(400px, 50vh, 600px);
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2%;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    input {
+      width: 50%;
+      height: 10%;
+      margin: 10px;
+      border-radius: 15px;
+      border: 1px solid var(--primary-bg-color);
+      background-color: var(--input-bg-color);
+      backdrop-filter: blur(25px);
+      border-radius: 5px;
+      padding: 5px;
+    }
+    input[type="submit"] {
+      width: 30%;
+      height: 10%;
+      margin: 10px;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 5px;
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    span {
+      color: red;
+      margin: 1.4em;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    p {
+      display: none;
+      color: var(--danger-color);
+      font-size: 1.3rem;
+    }
+    .error {
+      display: block;
+    }
+  }
+}

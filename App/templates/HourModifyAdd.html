@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/HourModifyAdd.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='img/icon.png') }}"
+    />
+    <meta
+      name="description"
+      content="Explore our innovative website designed for efficient workforce management! Easily track and store the number of hours your employees have worked, with a user-friendly interface. Our system allows seamless modification, viewing, and printing of detailed work hours for each worker. Stay organized, save time, and enhance productivity with our powerful tools. Try it now!"
+    />
+    <title>Add modify hours</title>
+  </head>
+
+  <body>
+    <form action="#">
+      <div class="codiceFiscale">
+        <label for="codiceFiscale">Codice fiscale</label>
+        <input
+          type="text"
+          name="codiceFiscale"
+          id="codiceFiscale"
+          value="{{userID}}"
+          readonly
+        />
+      </div>
+      <div class="lastName">
+        <label for="lastName">Last name</label>
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          value="{{LastName}}"
+          readonly
+        />
+      </div>
+      <div class="firstName">
+        <label for="firstName">First name</label>
+        <input
+          type="text"
+          name="firstName"
+          id="firstName"
+          readonly
+          value="{{FirstName}}"
+        />
+      </div>
+
+      <div class="Fulldate">
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" required />
+      </div>
+      <div class="nbrOfHour">
+        <label for="nbrOfHour">Number of hours</label>
+        <input
+          type="number"
+          name="nbrOfHour"
+          id="nbrOfHour"
+          min="0"
+          max="15"
+          default="0"
+          required
+        />
+      </div>
+      <div class="comments">
+        <label for="comments">Comments</label>
+        <textarea name="comments" id="comments" cols="30" rows="5"></textarea>
+      </div>
+      <div class="allBtns">
+        <input
+          type="button"
+          value="Confirm"
+          id="confirmationBtn"
+          onclick="FNAddUpdateValueToTheDataBase()"
+        />
+        <input type="reset" value="Cancel" onclick="resetInput()" />
+        <input type="button" value="print" />
+      </div>
+    </form>
+    <a href="/logout" class="logout">Log out</a>
+    <script>
+      setTimeout(function () {
+        window.location.href = "/logout";
+      }, 900000);
+    </script>
+    <script src="{{ url_for('static', filename='js/modifyPage.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/ViewPages.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='img/icon.png') }}"
+    />
+    <meta
+      name="description"
+      content="Explore our innovative website designed for efficient workforce management! Easily track and store the number of hours your employees have worked, with a user-friendly interface. Our system allows seamless modification, viewing, and printing of detailed work hours for each worker. Stay organized, save time, and enhance productivity with our powerful tools. Try it now!"
+    />
+    <title>{{TitleName}}</title>
+  </head>
+  <body>
+    <h1>{{UserNameAndLastName}}</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>{{fields[0]}}</th>
+          <th>{{fields[1]}}</th>
+          <th>{{fields[2]}}</th>
+        </tr>
+      </thead>
+      <tbody id="Table">
+        {% for i in rangeInMonth %}
+        <tr>
+          <td>{{ i[0] }}</td>
+          {% if fields[1] == "Hours" %}
+          <td>{{ i[1] }}</td>
+          {% else %}
+          <td>{{ months[i[1] - 1] }}</td>
+          {% endif %}
+          <td>{{ i[2] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="#Download" onclick="print()" id="printPage">Download</a>
+  </body>
+</html>

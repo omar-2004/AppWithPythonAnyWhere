@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unauthorized</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/unauthorized.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='img/icon.png') }}"
+    />
+    <meta
+      name="description"
+      content="Explore our innovative website designed for efficient workforce management! Easily track and store the number of hours your employees have worked, with a user-friendly interface. Our system allows seamless modification, viewing, and printing of detailed work hours for each worker. Stay organized, save time, and enhance productivity with our powerful tools. Try it now!"
+    />
+  </head>
+
+  <body>
+    <div class="lock"></div>
+    <div class="message">
+      <h1>Access to this page is restricted</h1>
+      <p>Please check with the site admin if you believe this is a mistake.</p>
+      <a href="{{ url_for('index') }}">Go back</a>
+    </div>
+  </body>
+</html>

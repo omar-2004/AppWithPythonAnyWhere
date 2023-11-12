@@ -1,0 +1,18 @@
+:root {
+  --primary-bg-color: #e8e0d1;
+  --secondary-bg-color: #aea89c;
+  --primary-color: #081b3d;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --input-bg-color: rgba(255, 255, 255, 0.451);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--primary-color);
+  transition: all 0.5s ease-in-out;
+}

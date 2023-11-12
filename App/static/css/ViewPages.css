@@ -1,0 +1,40 @@
+@import "DEFAULTCOLOR.css";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: -moz-max-content;
+  height: max-content;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body h1 {
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+body table {
+  width: 100%;
+  border: 1px solid var(--primary-bg-color);
+}
+body table tr {
+  border: 1px solid var(--primary-bg-color);
+}
+body table td,
+body table th {
+  padding: 3px;
+  text-align: center;
+}
+
+@media only print {
+  #printPage {
+    display: none;
+  }
+}/*# sourceMappingURL=ViewPages.css.map */

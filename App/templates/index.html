@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/MainPage.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='img/icon.png') }}"
+    />
+    <meta
+      name="description"
+      content="Explore our innovative website designed for efficient workforce management! Easily track and store the number of hours your employees have worked, with a user-friendly interface. Our system allows seamless modification, viewing, and printing of detailed work hours for each worker. Stay organized, save time, and enhance productivity with our powerful tools. Try it now!"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <form action="login" method="POST">
+      <span>
+        <h1>Login</h1>
+      </span>
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" required autocomplete />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+
+      <input type="submit" value="Login" />
+      <p class="{{classNameOnError}}">
+        Error, username or password is incorrect
+      </p>
+    </form>
+  </body>
+</html>
